@@ -46,27 +46,27 @@ function displayTimeBlocks() {
 
     },
     {
-      hour: 1,
+      hour: 13,
       displayHour: "1PM"
       
     },
     {
-      hour: 2,
+      hour: 14,
       displayHour: "2PM"
       
     },
     {
-      hour: 3,
+      hour: 15,
       displayHour: "3PM"
       
     },
     {
-      hour: 4,
+      hour: 16,
       displayHour: "4PM"
       
     },
     {
-      hour: 5,
+      hour: 17,
       displayHour: "5PM"
 
     },
@@ -77,7 +77,7 @@ function displayTimeBlocks() {
   for (var i = 0; i < workHours.length; i++) {
     var currentBlock = workHours[i];
 
-   var  currentHour = 9;
+   var  currentHour =11;
 
    var classHour = "present"
 
@@ -100,3 +100,4 @@ function displayTimeBlocks() {
 
   $("#time-block-container").html(timeBlockHtml)
 }
+displayTimeBlocks();
