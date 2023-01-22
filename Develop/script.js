@@ -5,7 +5,7 @@
 var currentDayEl = $("#currentDay");
 
 $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
+// TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
@@ -23,120 +23,11 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-  function currentDay() {
-    var rightNow = dayjs().format('dddd, MMMM DD, YYYY ');
+  function displayDate() {
+    var rightNow = dayjs().format('dddd, MMMM D, YYYY');
     currentDayEl.text(rightNow);
   }
 
-  currentDay();
+
+  displayDate();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function displayTimeBlocks() {
-//   var workHours = [
-//     {
-//       hour: 9,
-//       displayHour: "9AM"
-
-//     },
-//     {
-//       hour: 10,
-//       displayHour: "10AM"
-
-//     },
-//     {
-//       hour: 11,
-//       displayHour: "11AM"
-
-//     },
-//     {
-//       hour: 12,
-//       displayHour: "12PM"
-
-//     },
-//     {
-//       hour: 13,
-//       displayHour: "1PM"
-      
-//     },
-//     {
-//       hour: 14,
-//       displayHour: "2PM"
-      
-//     },
-//     {
-//       hour: 15,
-//       displayHour: "3PM"
-      
-//     },
-//     {
-//       hour: 16,
-//       displayHour: "4PM"
-      
-//     },
-//     {
-//       hour: 17,
-//       displayHour: "5PM"
-
-//     },
-    
-//   ]
-
-//   var timeBlockHtml = ""
-//   for (var i = 0; i < workHours.length; i++) {
-//     var currentBlock = workHours[i];
-
-//    var  currentHour =11;
-
-//    var classHour = "present"
-
-//    if(currentBlock.hour < currentHour){
-//     classHour = "past"
-//    }else if(currentBlock.hour > currentHour){
-//     classHour = "future"
-//    }
-
-//     timeBlockHtml += `
-//     <div id="hour-${currentBlock.hour}" class="row time-block">
-//         <div class="col-2 col-md-1 hour text-center py-3">${currentBlock.displayHour}</div>
-//         <textarea id="text-${currentBlock.hour}" class=" ${classHour} col-8 col-md-10 description" rows="3"> </textarea>
-//         <button class="btn saveBtn col-2 col-md-1" data-hour="${currentBlock.hour}" aria-label="save">
-//           <i class="fas fa-save" aria-hidden="true"></i>
-//         </button>
-//       </div>
-//     `
-//   }
-
-//   $("#time-block-container").html(timeBlockHtml)
-// }
-
-// displayTimeBlocks();
