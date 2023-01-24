@@ -15,25 +15,27 @@ $(function () {
   }
 
   function timeBlockColor() {
-      
-
+    
+    var rightNowHour = dayjs().format("HH");
     $(".time-block").each(function() {
     var currentHour = parseInt($(this).attr("id"));
 
-    if (currentHour > rightNow) {
+    if (currentHour > rightNowHour) {
       $(this).addClass("future");
-    } else if (currentHour === rightNow) {
+    } else if (currentHour == rightNowHour) {
       $(this).addClass("present");
     } else {
       $(this).addClass("past");
     }
   })
   };
+    
+    
 
 saveBtn.on("click", function() {
 
   var time = $(this).siblings(".hour").text();
-  var description = $(this).siblings(".description").val;
+  var description = $(this).siblings(".description").val();
 
   localStorage.setItem(time, description);
 });
