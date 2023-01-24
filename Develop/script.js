@@ -4,7 +4,7 @@
 
 var currentDayEl = $("#currentDay");
 var saveBtn = $(".saveBtn");
-
+var rightNow = dayjs().format('dddd, MMMM D, YYYY');
 
 
 $(function () {
@@ -15,14 +15,14 @@ $(function () {
   }
 
   function timeBlockColor() {
-      var hour
+      
 
     $(".time-block").each(function() {
     var currentHour = parseInt($(this).attr("id"));
 
-    if (currentHour > hour) {
+    if (currentHour > rightNow) {
       $(this).addClass("future");
-    } else if (currentHour === hour) {
+    } else if (currentHour === rightNow) {
       $(this).addClass("present");
     } else {
       $(this).addClass("past");
